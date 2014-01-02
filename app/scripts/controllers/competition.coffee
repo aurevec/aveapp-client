@@ -1,8 +1,8 @@
 'use strict'
 
 angular.module('aveApp')
-  .controller 'CompetitionCtrl', ['$scope', '$routeParams', 'CompetitionsResource', ($scope, $routeParams, CompetitionsResource) ->
-    CompetitionsResource('/countries/' +  $routeParams.countryId + '/competitions').all
+  .controller 'CompetitionCtrl', ['$scope', 'CompetitionsResource', ($scope, CompetitionsResource) ->
+    CompetitionsResource.all
       success: (competitions) ->
         $scope.competitions = competitions
   ]
