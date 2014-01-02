@@ -2,6 +2,18 @@ body {
 	padding-top: 5px;
 }
 
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
 .country, .competition, .season, .day {
 	.button {
 		@extend .button;

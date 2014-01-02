@@ -1,0 +1,23 @@
+<!-- Main Grid Section -->
+
+<div class="clearfix match">
+  <table>
+      <thead>
+        <tr>
+          <th width="250">Home</th>
+          <th width="50" class="center">Score</th>
+          <th width="250" class="right">Away</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="match in matches">
+          <td>{{ match.home_team_name }}</td>
+          <td align="center">{{ match.home_goals }} - {{ match.away_goals }}</td>
+          <td align="right">{{ match.away_team_name }}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+ 
+<!-- End Grid Section -->
+    
