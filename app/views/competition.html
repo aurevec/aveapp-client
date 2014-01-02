@@ -1,7 +1,7 @@
 <!-- Main Grid Section -->
 
 <div class="clearfix competition">
-  <a class="button" ng-repeat="competition in competitions">{{ competition.name }}</a>
+  <a class="button" ng-repeat="competition in competitions" href="#/countries/{{ countryId }}/competitions/{{ competition.id }}/seasons">{{ competition.name }}</a>
 </div>
  
 <!-- End Grid Section -->
