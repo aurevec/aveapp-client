@@ -22,6 +22,9 @@ angular.module('aveApp', [
       .when '/countries/:countryId/competitions/:competitionId/seasons',
         templateUrl: 'views/season.html'
         controller: 'SeasonCtrl'  
+      .when '/countries/:countryId/competitions/:competitionId/seasons/:seasonId/days',
+        templateUrl: 'views/day.html'
+        controller: 'DayCtrl'  
       .otherwise
         redirectTo: '/'
   ]

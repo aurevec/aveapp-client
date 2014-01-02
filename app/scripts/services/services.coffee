@@ -8,3 +8,6 @@ angular.module('aveapp.services', ['aveapp.resource'])
   .factory('SeasonsResource', ['$routeParams', 'AveappResource', ($routeParams, AveappResource) -> 
     return AveappResource('/countries/' +  $routeParams.countryId + '/competitions/' + $routeParams.competitionId + '/seasons', 'season')
   ])  
+  .factory('DaysResource', ['$routeParams', 'AveappResource', ($routeParams, AveappResource) -> 
+    return AveappResource('/countries/' +  $routeParams.countryId + '/competitions/' + $routeParams.competitionId + '/seasons/' + $routeParams.seasonId + '/days', 'day')
+  ])  
