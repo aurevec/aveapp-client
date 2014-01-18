@@ -3,3 +3,12 @@ dist
 .tmp
 .sass-cache
 app/bower_components
+
+# Ignore various editors config files
+.idea
+*#*#
+.#*
+.emacs*
+*.swp
+*.orig
+.project

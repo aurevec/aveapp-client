@@ -371,6 +371,9 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-bower-requirejs');
+
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
@@ -418,6 +421,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'bower',
     'newer:jshint',
     'test',
     'build'
