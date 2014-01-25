@@ -19,7 +19,6 @@ angular.module('aveapp.resource', ['ngResource'])
           params: opts
         }
 
-
       return {
         all: (opts) ->
           opts = _extractOpts(opts)
