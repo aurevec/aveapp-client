@@ -5,4 +5,4 @@ window.realtime =
       # publish the change on the client side, the channel == the resource
       console.log message
 
-window.realtime.connect()
+#window.realtime.connect()
