@@ -23,3 +23,12 @@ body {
 		vertical-align: middle;
 	}
 }
+
+.match.updated-add {
+  transition: all 1s;
+  -webkit-transition: all 3s ease-in-out;
+}
+
+.match.updated-add-active {
+  background-color: #A9F5BC;
+}

@@ -19,9 +19,9 @@
       </thead>
       <tbody>
         <tr ng-repeat="match in matches">
-          <td>{{ match.home_team_name }}</td>
-          <td align="center">{{ match.home_goals }} - {{ match.away_goals }}</td>
-          <td align="right">{{ match.away_team_name }}</td>
+          <td class="match" animate-on-change="match.home_goals + match.away_goals">{{ match.home_team_name }}</td>
+          <td class="match" align="center" animate-on-change="match.home_goals + match.away_goals">{{ match.home_goals }} - {{ match.away_goals }} ({{match.home_goals + match.away_goals}})</td>
+          <td class="match" align="right" animate-on-change="match.home_goals + match.away_goals">{{ match.away_team_name }}</td>
         </tr>
       </tbody>
   </table>

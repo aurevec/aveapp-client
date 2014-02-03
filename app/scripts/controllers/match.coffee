@@ -17,5 +17,4 @@ angular.module('aveApp')
         i['id'] == matchId
       match['home_goals'] = data.obj.home_goals
       match['away_goals'] = data.obj.away_goals
-
   ]

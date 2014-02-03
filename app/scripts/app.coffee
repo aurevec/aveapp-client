@@ -5,8 +5,10 @@ angular.module('aveApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngAnimate',
   'aveapp.resource',
-  'aveapp.services'
+  'aveapp.services',
+  'aveapp.directives'
 ])
   .config ['$routeProvider', ($routeProvider) ->
     $routeProvider
