@@ -3,9 +3,9 @@ angular.module('aveapp.resource', ['ngResource'])
     $httpProvider.defaults.headers.common['Accept'] = 'application/vnd.aveapp+json;version=1'
     $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=UTF-8'  
   ])
-  .factory('AveappResource', ['$http', ($http) ->
+  .factory('AveappResource', ['$http', 'ENV', ($http, ENV) ->
     (url, resource, plural) ->
-      baseUrl = "http://aveapp.dev/api" + url
+      baseUrl = ENV.apiEndPoint + url
       plural ||= "#{resource}s"
 
       _extractOpts = (opts = {}) ->

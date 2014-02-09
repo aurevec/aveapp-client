@@ -1,6 +1,7 @@
 'use strict'
 
 angular.module('aveApp', [
+  'config',
   'ngCookies',
   'ngResource',
   'ngSanitize',

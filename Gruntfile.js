@@ -362,6 +362,33 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
+    ngconstant: {
+      options: {
+        space: '  '
+      },
+      // Environment targets
+      development: [{
+          dest: '<%= yeoman.app %>/scripts/config.js',
+          wrap: '"use strict";\n\n <%= __ngModule %>',
+          name: 'config',
+          constants: {
+            ENV: {
+              name: 'development',
+              apiEndpoint: "http://aveapp.dev/api"
+            }
+          }
+      }],
+      production: [{
+        dest: '<%= yeoman.dist %>/scripts/config.js',
+        wrap: '"use strict";\n\n <%= __ngModule %>',
+        name: 'config',
+        constants: {
+          ENV: 'production',
+          apiEndpoint: 'http://api.livesite.com'
+        }
+      }]
+    },
+
     // Test settings
     karma: {
       unit: {
@@ -382,6 +409,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'ngconstant:development',
       'bower-install',
       'concurrent:server',
       'autoprefixer',
@@ -405,6 +433,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:production',
     'bower-install',
     'useminPrepare',
     'concurrent:dist',
