@@ -4,7 +4,8 @@
 
 .constant("ENV", {
   "name": "development",
-  "apiEndPoint": "http://aveapp.dev/api"
+  "apiEndpoint": "http://aveapp.dev/api",
+  "socketIoUrl": "http://localhost:8081/socket.io/socket.io.js"
 })
 
 ;

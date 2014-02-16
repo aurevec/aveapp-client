@@ -5,7 +5,7 @@ angular.module('aveapp.resource', ['ngResource'])
   ])
   .factory('AveappResource', ['$http', 'ENV', ($http, ENV) ->
     (url, resource, plural) ->
-      baseUrl = ENV.apiEndPoint + url
+      baseUrl = ENV.apiEndpoint + url
       plural ||= "#{resource}s"
 
       _extractOpts = (opts = {}) ->

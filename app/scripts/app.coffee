@@ -11,7 +11,7 @@ angular.module('aveApp', [
   'aveapp.services',
   'aveapp.directives'
 ])
-  .config ['$routeProvider', ($routeProvider) ->
+  .config ['$routeProvider', '$sceDelegateProvider', ($routeProvider, $sceDelegateProvider) ->
     $routeProvider
       .when '/',
         templateUrl: 'views/country.html'
@@ -33,4 +33,11 @@ angular.module('aveApp', [
         controller: 'MatchCtrl'    
       .otherwise
         redirectTo: '/'
+
+    $sceDelegateProvider.resourceUrlWhitelist [
+      "self"
+      "http://localhost:8081/**"
+      "http://aveapp-node.herokuapp.com/**"
+    ]
   ]
+

@@ -374,7 +374,8 @@ module.exports = function (grunt) {
           constants: {
             ENV: {
               name: 'development',
-              apiEndpoint: "http://aveapp.dev/api"
+              apiEndpoint: 'http://aveapp.dev/api',
+              socketIoUrl: 'http://localhost:8081/socket.io/socket.io.js'
             }
           }
       }],
@@ -384,7 +385,8 @@ module.exports = function (grunt) {
         name: 'config',
         constants: {
           ENV: 'production',
-          apiEndpoint: 'http://api.livesite.com'
+          apiEndpoint: 'http://api.livesite.com',
+          socketIoUrl: ''
         }
       }]
     },
